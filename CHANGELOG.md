@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.5.0 - Added Travis CI badge to template
+
 0.4.1 - Fixed failing tests in Travis CI
 
 0.4.0 - Added tests, Travis CI, and fixed UNLICENSE not showing in package.json
