@@ -1,4 +1,4 @@
-# test-unlicense
+# test-unlicense [![Build status](https://travis-ci.org/twolfson/test-unlicense.png?branch=master)](https://travis-ci.org/twolfson/test-unlicense)
 
 Unlicense test project
 

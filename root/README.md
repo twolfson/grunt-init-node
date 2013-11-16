@@ -1,4 +1,4 @@
-# {%= name %}
+# {%= name %} [![Build status](https://travis-ci.org/{%= travis_username %}/{%= name %}.png?branch=master)](https://travis-ci.org/{%= travis_username %}/{%= name %})
 
 {%= description %}
 
