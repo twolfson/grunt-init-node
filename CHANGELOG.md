@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.6.0 - Moved donating section after contributing section
+
 0.5.1 - Added .travis.yml to template
 
 0.5.0 - Added Travis CI badge to template
