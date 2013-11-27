@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.8.1 - Patch for broken tests
+
 0.8.0 - Added `allow_failures` to .travis.yml
 
 0.7.0 - Moved prompt from "Unlicense" to "UNLICENSE"
