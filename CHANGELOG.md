@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.7.0 - Moved prompt from "Unlicense" to "UNLICENSE"
+
 0.6.0 - Moved donating section after contributing section
 
 0.5.1 - Added .travis.yml to template
