@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.9.0 - Moved to elegant require inside of test
+
 0.8.1 - Patch for broken tests
 
 0.8.0 - Added `allow_failures` to .travis.yml
