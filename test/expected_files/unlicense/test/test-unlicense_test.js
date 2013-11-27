@@ -1,4 +1,4 @@
-var test_unlicense = require('../lib/test-unlicense.js');
+var test_unlicense = require('../');
 
 describe('test-unlicense', function () {
   before(function () {
