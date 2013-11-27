@@ -29,7 +29,7 @@ describe('An UNLICENSE init', function () {
       .on(/Project git repository/).respond('git://abc\n')
       .on(/Project homepage/).respond('http://abc\n')
       .on(/Project issues tracker/).respond('http://abc/issues\n')
-      .on(/Licenses/).respond('Unlicense\n')
+      .on(/Licenses/).respond('UNLICENSE\n')
       .on(/Author name/).respond('Todd Wolfson\n')
       .on(/Author email/).respond('todd@twolfson.com\n')
       .on(/Author url/).respond('http://twolfson.com/\n')

@@ -42,7 +42,7 @@ exports.template = function(grunt, init, done) {
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('bugs'),
-    init.prompt('licenses', 'Unlicense'),
+    init.prompt('licenses', 'UNLICENSE'),
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
@@ -89,7 +89,7 @@ exports.template = function(grunt, init, done) {
 
     // If the licenses contain an Unlicense, pluck it
     props.unlicense = props.licenses.filter(function (license) {
-      return license.match(/^Unlicense$/i);
+      return license.match(/^UNLICENSE$/i);
     })[0];
 
     // If an unlicense was found, add it to output
