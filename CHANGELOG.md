@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+0.10.0 - Removed long name for `js` from README
+
 0.9.0 - Moved to elegant require inside of test
 
 0.8.1 - Patch for broken tests
