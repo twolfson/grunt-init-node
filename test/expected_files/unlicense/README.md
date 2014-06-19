@@ -5,7 +5,7 @@ Unlicense test project
 ## Getting Started
 Install the module with: `npm install test-unlicense`
 
-```javascript
+```js
 var test_unlicense = require('test-unlicense');
 test_unlicense.awesome(); // "awesome"
 ```
