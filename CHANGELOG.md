@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.0.0 - Moved from gittip-badge to gratipay-badge
+
 0.10.0 - Removed long name for `js` from README
 
 0.9.0 - Moved to elegant require inside of test
