@@ -7,7 +7,7 @@ This is a personal fork from https://github.com/gruntjs/grunt-init-node. Highlig
 - mocha tests over nodeunit tests
 - Create CHANGELOG.md
 - Prompt for keywords
-- Include gittip badge
+- Include gratipay badge
 - Removed Travis CI badge for now (will prob come back when I decide to start using Travis religiously)
 - Added [UNLICENSE][unlicense-site] to available licenses (default)
 
