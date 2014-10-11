@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.0.1 - Upgraded `npm` inside Travis CI to fix `node@0.8` issues
+
 1.0.0 - Moved from gittip-badge to gratipay-badge
 
 0.10.0 - Removed long name for `js` from README
