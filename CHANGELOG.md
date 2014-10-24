@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.1.0 - Fixed bug in CHANGELOG version
+
 1.0.1 - Upgraded `npm` inside Travis CI to fix `node@0.8` issues
 
 1.0.0 - Moved from gittip-badge to gratipay-badge
