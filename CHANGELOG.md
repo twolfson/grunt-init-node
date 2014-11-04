@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.3.0 - Added Travis CI fix for `node@0.8` to template
+
 1.2.0 - Renamed from `_test.js` to `-test.js`
 
 1.1.0 - Fixed bug in CHANGELOG version
