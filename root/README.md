@@ -7,7 +7,7 @@ Install the module with: `npm install {%= name %}`
 
 ```js
 var {%= js_safe_name %} = require('{%= name %}');
-{%= js_safe_name %}.awesome(); // "awesome"
+{%= js_safe_name %}(); // 'awesome'
 ```
 
 ## Documentation
