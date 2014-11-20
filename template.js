@@ -52,7 +52,6 @@ exports.template = function (grunt, init, done) {
     init.prompt('gratipay_username'),
     init.prompt('node_version', '>= 0.8.0'),
     init.prompt('main'),
-    init.prompt('npm_test', 'mocha'),
     {
       name: 'keywords',
       message: 'What keywords relate to this plugin (comma separated)?'
@@ -118,8 +117,14 @@ exports.template = function (grunt, init, done) {
 
     // Generate package.json file.
     init.writePackageJSON('package.json', props, function (pkg) {
+      // Define scripts
+      pkg.scripts = {
+        lint: 'jshint lib/ test/ && jscs lib/ test/',
+        pretest: 'twolfson-style install',
+        test: 'npm run lint && mocha --reporter dot'
+      };
+
       // If there was UNLICENSE, add it as a license
-      console.log(pkg);
       if (props.unlicense) {
         pkg.licenses.push({
           type: 'UNLICENSE',
