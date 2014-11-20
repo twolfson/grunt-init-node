@@ -128,7 +128,6 @@ exports.template = function(grunt, init, done) {
       }
 
       // If this project is private, mark it appropriately
-      console.log('wat', props['private']);
       if (props['private']) {
         pkg['private'] = true;
       }

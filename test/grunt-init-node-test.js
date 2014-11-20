@@ -81,7 +81,7 @@ describe('An UNLICENSE init', function () {
   });
 });
 
-describe.skip('A private init', function () {
+describe('A private init', function () {
   before(function (done) {
     // Relocate to the test directory
     var actualDir = __dirname + '/actual_files/private';
@@ -123,6 +123,7 @@ describe.skip('A private init', function () {
   });
 
   it('adds a private flag to the `package.json`', function () {
+    // Load our actual and expected files
     var filepath = __dirname + '/actual_files/private/package.json',
         actualFile = fs.readFileSync(filepath, 'utf8'),
         expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
