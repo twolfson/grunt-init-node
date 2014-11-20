@@ -76,10 +76,10 @@ exports.template = function(grunt, init, done) {
     // Set up dependencies
     props.dependencies = {};
     props.devDependencies = {
-      'mocha': '~1.11.0',
-      'grunt': '~0.4.1',
-      'grunt-contrib-jshint': '~0.6.0',
-      'grunt-contrib-watch': '~0.4.0'
+      jscs: '~1.7.3',
+      jshint: '~2.5.10',
+      mocha: '~2.0.1',
+      'twolfson-style': '~1.0.0'
     };
 
     // Redefine safe name to our standards
