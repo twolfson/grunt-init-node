@@ -39,6 +39,7 @@ describe('An UNLICENSE init', function () {
       .on(/Main module\/entry point/).respond('lib/test-unlicense\n')
       .on(/Npm test command/).respond('mocha\n')
       .on(/What keywords/).respond('a, b, c\n')
+      .on(/private/).respond('\n')
       .on(/any changes/).respond('n\n')
       ['error'](done)
       .end(function (code) {
@@ -112,6 +113,7 @@ describe('A private init', function () {
       .on(/Main module\/entry point/).respond('lib/test-private\n')
       .on(/Npm test command/).respond('mocha\n')
       .on(/What keywords/).respond('a, b, c\n')
+      .on(/private/).respond('y\n')
       .on(/any changes/).respond('n\n')
       ['error'](done)
       .end(function (code) {
