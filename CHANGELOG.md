@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.5.0 - Added `private` question
+
 1.4.0 - Changed default names to be `camelCase` and made tests test
 
 1.3.0 - Added Travis CI fix for `node@0.8` to template
