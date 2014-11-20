@@ -6,6 +6,9 @@
  * Licensed under the MIT license.
  */
 
+// Load in dependencies
+ var _s = require('underscore.string');
+
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
 
@@ -55,12 +58,6 @@ exports.template = function(grunt, init, done) {
       name: 'keywords',
       message: 'What keywords relate to this plugin (comma separated)?'
     }
-    // {
-    //   name: 'travis',
-    //   message: 'Will this project be tested with Travis CI?',
-    //   default: 'Y/n',
-    //   warning: 'If selected, you must enable Travis support for this project in https://travis-ci.org/profile'
-    // }
   ], function(err, props) {
     // Set up dependencies
     props.dependencies = {};
@@ -70,9 +67,11 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-jshint': '~0.6.0',
       'grunt-contrib-watch': '~0.4.0'
     };
-    // // TODO: compute dynamically?
-    // props.travis = /y/i.test(props.travis);
-    // props.travis_node_version = '0.10';
+
+    // Redefine safe name to our standards
+    // https://github.com/gruntjs/grunt-init/blob/0327945c4f48cb8b320ebc051b7cb7852debfb3d/tasks/init.js#L99-L106
+    data.js_safe_name = _s.camelize(data.js_safe_name);
+
 
     // Break up the keywords by commas
     var keywords = props.keywords;
