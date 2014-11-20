@@ -4,7 +4,7 @@ var testUnlicense = require('../');
 
 // Start our tests
 describe('test-unlicense', function () {
-  it('exports a function', function () {
-    assert.strictEqual(typeof testUnlicense, 'function');
+  it('returns awesome', function () {
+    assert.strictEqual(testUnlicense(), 'awesome');
   });
 });
