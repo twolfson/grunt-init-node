@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.6.0 - Added `twolfson-style` to repo and template, fixed lint errors, and updated dependencies
+
 1.5.0 - Added `private` question
 
 1.4.0 - Changed default names to be `camelCase` and made tests test
