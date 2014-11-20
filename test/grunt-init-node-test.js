@@ -1,11 +1,11 @@
 // Load in depdendencies
-var assert = require('assert'),
-    fs = require('fs'),
-    grunt = require('grunt'),
-    suppose = require('suppose'),
-    rimraf = require('rimraf'),
-    mkdirp = require('mkdirp'),
-    findit = require('findit');
+var assert = require('assert');
+var fs = require('fs');
+var grunt = require('grunt');
+var suppose = require('suppose');
+var rimraf = require('rimraf');
+var mkdirp = require('mkdirp');
+var findit = require('findit');
 
 describe('An UNLICENSE init', function () {
   before(function (done) {
@@ -41,7 +41,7 @@ describe('An UNLICENSE init', function () {
       .on(/What keywords/).respond('a, b, c\n')
       .on(/private/).respond('\n')
       .on(/any changes/).respond('n\n')
-      ['error'](done)
+      .error(done)
       .end(function (code) {
         assert.strictEqual(code, 0, 'Exited with non-zero code (' + code + ')');
         done();
@@ -53,9 +53,9 @@ describe('An UNLICENSE init', function () {
     var finder = findit(this.actualDir);
     finder.on('file', function (filepath/*, stats*/) {
       // Load in the files
-      var actualFile = fs.readFileSync(filepath, 'utf8'),
-          expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
-          expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
+      var actualFile = fs.readFileSync(filepath, 'utf8');
+      var expectedFilepath = filepath.replace('/actual_files/', '/expected_files/');
+      var expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
 
       // If the file is README.md, template out expectedFile
       if (filepath.match(/\/README.md$/)) {
@@ -74,8 +74,8 @@ describe('An UNLICENSE init', function () {
     var finder = findit(this.expectedDir);
     finder.on('file', function (filepath/*, stats*/) {
       // Get the stats of the actual file (error will throw if non-existant)
-      var actualFilepath = filepath.replace('/expected_files/', '/actual_files/'),
-          actualStats = fs.statSync(actualFilepath);
+      var actualFilepath = filepath.replace('/expected_files/', '/actual_files/');
+      var actualStats = fs.statSync(actualFilepath);
       assert(actualStats);
     });
     finder.on('end', done);
@@ -116,7 +116,7 @@ describe('A private init', function () {
       .on(/What keywords/).respond('a, b, c\n')
       .on(/private/).respond('y\n')
       .on(/any changes/).respond('n\n')
-      ['error'](done)
+      .error(done)
       .end(function (code) {
         assert.strictEqual(code, 0, 'Exited with non-zero code (' + code + ')');
         done();
@@ -125,10 +125,10 @@ describe('A private init', function () {
 
   it('adds a private flag to the `package.json`', function () {
     // Load our actual and expected files
-    var filepath = __dirname + '/actual_files/private/package.json',
-        actualFile = fs.readFileSync(filepath, 'utf8'),
-        expectedFilepath = filepath.replace('/actual_files/', '/expected_files/'),
-        expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
+    var filepath = __dirname + '/actual_files/private/package.json';
+    var actualFile = fs.readFileSync(filepath, 'utf8');
+    var expectedFilepath = filepath.replace('/actual_files/', '/expected_files/');
+    var expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
 
     // Assert their content is equal
     assert.strictEqual(actualFile, expectedFile, 'Content of "' + filepath + '" did not match as expected');
