@@ -119,6 +119,7 @@ exports.template = function (grunt, init, done) {
     // Generate package.json file.
     init.writePackageJSON('package.json', props, function (pkg) {
       // If there was UNLICENSE, add it as a license
+      console.log(pkg);
       if (props.unlicense) {
         pkg.licenses.push({
           type: 'UNLICENSE',

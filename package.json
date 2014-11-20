@@ -25,7 +25,7 @@
     "jscs": "~1.7.3",
     "jshint": "~2.5.10",
     "mkdirp": "~0.3.5",
-    "mocha": "~1.21.0",
+    "mocha": "1.21.4",
     "rimraf": "~2.2.2",
     "suppose": "~0.2.0",
     "twolfson-style": "~1.0.0"
