@@ -11,7 +11,7 @@
     "url": "https://github.com/twolfson/grunt-init-node/issues"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "grunt jshint && mocha"
   },
   "dependencies": {
     "underscore.string": "~2.4.0"
