@@ -71,15 +71,6 @@ exports.template = function (grunt, init, done) {
       }
     }
   ], function (err, props) {
-    // Set up dependencies
-    props.dependencies = {};
-    props.devDependencies = {
-      jscs: '~1.7.3',
-      jshint: '~2.5.10',
-      mocha: '~2.0.1',
-      'twolfson-style': '~1.0.0'
-    };
-
     // Redefine safe name to our standards
     // https://github.com/gruntjs/grunt-init/blob/0327945c4f48cb8b320ebc051b7cb7852debfb3d/tasks/init.js#L99-L106
     props.js_safe_name = _s.camelize(props.js_safe_name);
@@ -124,6 +115,15 @@ exports.template = function (grunt, init, done) {
         test: 'npm run lint && mocha --reporter dot'
       };
 
+      // Set up dependencies
+      pkg.dependencies = {};
+      pkg.devDependencies = {
+        jscs: '~1.7.3',
+        jshint: '~2.5.10',
+        mocha: '~2.0.1',
+        'twolfson-style': '~1.0.0'
+      };
+
       // If there was UNLICENSE, add it as a license
       if (props.unlicense) {
         pkg.licenses.push({
@@ -131,6 +131,10 @@ exports.template = function (grunt, init, done) {
           url: props.homepage + '/blob/master/UNLICENSE'
         });
       }
+
+      // Reposition keywords
+      delete pkg.keywords;
+      pkg.keywords = props.keywords;
 
       // If this project is private, mark it appropriately
       if (props['private']) {
