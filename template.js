@@ -7,7 +7,7 @@
  */
 
 // Load in dependencies
- var _s = require('underscore.string');
+var _s = require('underscore.string');
 
 // Basic template description.
 exports.description = 'Create a Node.js module, including mocha unit tests.';
@@ -25,8 +25,7 @@ exports.after = [
 exports.warnOn = '*';
 
 // The actual init template.
-exports.template = function(grunt, init, done) {
-
+exports.template = function (grunt, init, done) {
   init.prompts.travis_username = {
     name: 'travis_username',
     message: 'Travis CI username (adds Travis CI badge)'
@@ -62,7 +61,7 @@ exports.template = function(grunt, init, done) {
       name: 'private',
       message: 'Should this project be private?',
       'default': 'y/N',
-      sanitize: function(value, data, done) {
+      sanitize: function (value, data, done) {
         // If the value is the default, swap it with `N`
         if (value === 'y/N') {
           value = 'N';
@@ -72,7 +71,7 @@ exports.template = function(grunt, init, done) {
         done(null, value.toLowerCase() === 'y');
       }
     }
-  ], function(err, props) {
+  ], function (err, props) {
     // Set up dependencies
     props.dependencies = {};
     props.devDependencies = {
@@ -107,7 +106,7 @@ exports.template = function(grunt, init, done) {
 
     // If an unlicense was found, add it to output
     if (props.unlicense) {
-      files['UNLICENSE'] = __dirname + '/licenses/UNLICENSE';
+      files.UNLICENSE = __dirname + '/licenses/UNLICENSE';
       props.licenses = [];
     } else {
       // Add properly-named license files.
@@ -139,5 +138,4 @@ exports.template = function(grunt, init, done) {
     // All done!
     done();
   });
-
 };
