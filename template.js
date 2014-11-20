@@ -70,7 +70,8 @@ exports.template = function(grunt, init, done) {
 
     // Redefine safe name to our standards
     // https://github.com/gruntjs/grunt-init/blob/0327945c4f48cb8b320ebc051b7cb7852debfb3d/tasks/init.js#L99-L106
-    data.js_safe_name = _s.camelize(data.js_safe_name);
+    props.js_safe_name = _s.camelize(props.js_safe_name);
+    props.js_test_safe_name = props.js_safe_name === 'test' ? 'myTest' : props.js_safe_name;
 
     // Break up the keywords by commas
     var keywords = props.keywords;
