@@ -61,7 +61,16 @@ exports.template = function(grunt, init, done) {
     {
       name: 'private',
       message: 'Should this project be private?',
-      'default': 'y/N'
+      'default': 'y/N',
+      sanitize: function(value, data, done) {
+        // If the value is the default, swap it with `N`
+        if (value === 'y/N') {
+          value = 'N';
+        }
+
+        // Check the values ('Y'.toLowerCase() === 'y')
+        done(null, value.toLowerCase() === 'y');
+      }
     }
   ], function(err, props) {
     // Set up dependencies
@@ -119,6 +128,7 @@ exports.template = function(grunt, init, done) {
       }
 
       // If this project is private, mark it appropriately
+      console.log('wat', props['private']);
       if (props['private']) {
         pkg['private'] = true;
       }
