@@ -57,6 +57,11 @@ exports.template = function(grunt, init, done) {
     {
       name: 'keywords',
       message: 'What keywords relate to this plugin (comma separated)?'
+    },
+    {
+      name: 'private',
+      message: 'Should this project be private?',
+      'default': 'y/N'
     }
   ], function(err, props) {
     // Set up dependencies
@@ -111,6 +116,11 @@ exports.template = function(grunt, init, done) {
           type: 'UNLICENSE',
           url: props.homepage + '/blob/master/UNLICENSE'
         });
+      }
+
+      // If this project is private, mark it appropriately
+      if (props['private']) {
+        pkg['private'] = true;
       }
 
       // Return the package
