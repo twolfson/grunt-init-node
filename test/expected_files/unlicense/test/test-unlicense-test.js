@@ -1,11 +1,10 @@
-var test_unlicense = require('../');
+// Load in dependencies
+var assert = require('assert');
+var testUnlicense = require('../');
 
+// Start our tests
 describe('test-unlicense', function () {
-  before(function () {
-
-  });
-
-  it('', function () {
-
+  it('exports a function', function () {
+    assert.strictEqual(typeof testUnlicense, 'function');
   });
 });

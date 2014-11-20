@@ -1,5 +1,7 @@
-function test_unlicense() {
+// Define our function
+function testUnlicense() {
 
 }
 
-module.exports = test_unlicense;
+// Export our function
+module.exports = testUnlicense;
