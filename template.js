@@ -120,8 +120,8 @@ exports.template = function (grunt, init, done) {
       pkg.devDependencies = {
         jscs: '~1.7.3',
         jshint: '~2.5.10',
-        mocha: '~2.0.1',
-        'twolfson-style': '~1.0.0'
+        mocha: '~1.11.0',
+        'twolfson-style': '~1.3.0'
       };
 
       // If there was UNLICENSE, add it as a license
