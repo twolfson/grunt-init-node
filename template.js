@@ -110,9 +110,10 @@ exports.template = function (grunt, init, done) {
     init.writePackageJSON('package.json', props, function (pkg) {
       // Define scripts
       pkg.scripts = {
-        lint: 'jshint lib/ test/ && jscs lib/ test/',
+        precheck: 'twolfson-style precheck lib/ test/',
+        lint: 'twolfson-style lint lib/ test/',
         pretest: 'twolfson-style install',
-        test: 'npm run lint && mocha --reporter dot'
+        test: 'npm run precheck && mocha --reporter dot && npm run lint'
       };
 
       // Set up dependencies
@@ -121,7 +122,7 @@ exports.template = function (grunt, init, done) {
         jscs: '~1.7.3',
         jshint: '~2.5.10',
         mocha: '~1.11.0',
-        'twolfson-style': '~1.3.0'
+        'twolfson-style': '~1.6.0'
       };
 
       // If there was UNLICENSE, add it as a license
