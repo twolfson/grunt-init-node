@@ -29,7 +29,7 @@
     "mocha": "1.21.4",
     "rimraf": "~2.2.2",
     "suppose": "~0.2.0",
-    "twolfson-style": "~1.5.0"
+    "twolfson-style": "~1.6.0"
   },
   "keywords": [],
   "private": true
