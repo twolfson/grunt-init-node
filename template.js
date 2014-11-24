@@ -137,8 +137,8 @@ exports.template = function (grunt, init, done) {
       pkg.keywords = props.keywords;
 
       // If this project is private, mark it appropriately
-      if (props['private']) {
-        pkg['private'] = true;
+      if (props.private) {
+        pkg.private = true;
       }
 
       // Return the package
