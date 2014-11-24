@@ -11,9 +11,10 @@
     "url": "https://github.com/twolfson/grunt-init-node/issues"
   },
   "scripts": {
-    "lint": "jshint *.js test/ && jscs *.js test/",
+    "precheck": "twolfson-style precheck *.js test/",
+    "lint": "twolfson-style lint *.js test/",
     "pretest": "twolfson-style install",
-    "test": "npm run lint && mocha --reporter dot"
+    "test": "npm run precheck && mocha --reporter dot && npm run lint"
   },
   "dependencies": {
     "underscore.string": "~2.4.0"
@@ -28,7 +29,7 @@
     "mocha": "1.21.4",
     "rimraf": "~2.2.2",
     "suppose": "~0.2.0",
-    "twolfson-style": "~1.0.0"
+    "twolfson-style": "~1.5.0"
   },
   "keywords": [],
   "private": true
