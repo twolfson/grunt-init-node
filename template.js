@@ -26,6 +26,11 @@ exports.warnOn = '*';
 
 // The actual init template.
 exports.template = function (grunt, init, done) {
+  init.prompts.license = {
+    name: 'license',
+    message: 'License'
+  };
+
   init.prompts.travis_username = {
     name: 'travis_username',
     message: 'Travis CI username (adds Travis CI badge)'
@@ -105,6 +110,11 @@ exports.template = function (grunt, init, done) {
 
     // Generate package.json file.
     init.writePackageJSON('package.json', props, function (pkg) {
+      // If there was UNLICENSE, add it as a license
+      if (props.unlicense) {
+        pkg.license = 'Unlicense';
+      }
+
       // Define scripts
       pkg.scripts = {
         precheck: 'twolfson-style precheck lib/ test/',
@@ -121,11 +131,6 @@ exports.template = function (grunt, init, done) {
         mocha: '~1.11.0',
         'twolfson-style': '~1.6.0'
       };
-
-      // If there was UNLICENSE, add it as a license
-      if (props.unlicense) {
-        pkg.license = 'Unlicense';
-      }
 
       // Reposition keywords
       delete pkg.keywords;
