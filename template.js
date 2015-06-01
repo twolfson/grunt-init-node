@@ -44,7 +44,7 @@ exports.template = function (grunt, init, done) {
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('bugs'),
-    init.prompt('licenses', 'UNLICENSE'),
+    init.prompt('license', 'Unlicense'),
     init.prompt('author_name'),
     init.prompt('author_email'),
     init.prompt('author_url'),
@@ -90,17 +90,14 @@ exports.template = function (grunt, init, done) {
     var files = init.filesToCopy(props);
 
     // If the licenses contain an Unlicense, pluck it
-    props.unlicense = props.licenses.filter(function (license) {
-      return license.match(/^UNLICENSE$/i);
-    })[0];
+    props.unlicense = props.license.match(/^UNLICENSE$/i);
 
     // If an unlicense was found, add it to output
     if (props.unlicense) {
       files.UNLICENSE = __dirname + '/licenses/UNLICENSE';
-      props.licenses = [];
     } else {
       // Add properly-named license files.
-      init.addLicenseFiles(files, props.licenses);
+      init.addLicenseFiles(files, props.license);
     }
 
     // Actually copy (and process) files.
@@ -127,10 +124,7 @@ exports.template = function (grunt, init, done) {
 
       // If there was UNLICENSE, add it as a license
       if (props.unlicense) {
-        pkg.licenses.push({
-          type: 'UNLICENSE',
-          url: props.homepage + '/blob/master/UNLICENSE'
-        });
+        pkg.license = 'Unlicense';
       }
 
       // Reposition keywords
