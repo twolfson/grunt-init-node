@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.12.1 - Removed unnecessary release.sh
+
 1.12.0 - Added `foundry@4.0.0` setup to template
 
 1.11.0 - Updated node version in `.travis.yml` and `package.json`
