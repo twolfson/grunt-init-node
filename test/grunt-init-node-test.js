@@ -133,7 +133,7 @@ describe('A private init', function () {
   });
 });
 
-describe.only('An MIT init', function () {
+describe('An MIT init', function () {
   before(function (done) {
     // Relocate to the test directory
     var actualDir = __dirname + '/actual_files/mit';
