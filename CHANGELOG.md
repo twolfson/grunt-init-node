@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.11.0 - Updated node version in `.travis.yml` and `package.json`
+
 1.10.1 - Added forgotten license field for non-Unlicense licenses
 
 1.10.0 - Repaired broken MIT licensing from `licenses` change
