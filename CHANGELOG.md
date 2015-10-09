@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.10.1 - Added forgotten license field for non-Unlicense licenses
+
 1.10.0 - Repaired broken MIT licensing from `licenses` change
 
 1.9.0 - Moved from deprecated `licenses` to `license` key for template
