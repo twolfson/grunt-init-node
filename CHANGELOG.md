@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.10.0 - Repaired broken MIT licensing from `licenses` change
+
 1.9.0 - Moved from deprecated `licenses` to `license` key for template
 
 1.8.0 - Upgraded to `twolfson-style@1.6.0`, added `precheck` to test run
