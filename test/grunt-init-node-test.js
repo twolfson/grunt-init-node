@@ -133,7 +133,7 @@ describe('A private init', function () {
   });
 });
 
-describe('An MIT init', function () {
+describe.only('An MIT init', function () {
   before(function (done) {
     // Relocate to the test directory
     var actualDir = __dirname + '/actual_files/mit';
@@ -183,7 +183,7 @@ describe('An MIT init', function () {
       var expectedFile = fs.readFileSync(expectedFilepath, 'utf8');
 
       // If the file is README.md, template out expectedFile
-      if (filepath.match(/\/README.md$/)) {
+      if (filepath.match(/\/LICENSE-MIT$/)) {
         expectedFile = grunt.template.process(expectedFile, {grunt: grunt});
       }
 

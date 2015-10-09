@@ -102,7 +102,7 @@ exports.template = function (grunt, init, done) {
       files.UNLICENSE = __dirname + '/licenses/UNLICENSE';
     } else {
       // Add properly-named license files.
-      init.addLicenseFiles(files, props.license);
+      init.addLicenseFiles(files, [props.license]);
     }
 
     // Actually copy (and process) files.

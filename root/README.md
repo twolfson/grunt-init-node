@@ -32,8 +32,8 @@ As of {%= grunt.template.today('mmm dd yyyy') %}, {%= author_name %} has release
 
 It has been released under the [UNLICENSE][].
 
-[UNLICENSE]: UNLICENSE{% } else if (licenses.length) { %}
+[UNLICENSE]: UNLICENSE{% } else if (license) { %}
 ## License
 Copyright (c) {%= grunt.template.today('yyyy') %} {%= author_name %}
 
-Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.{% } %}
+Licensed under the {%= license %} license.{% } %}
