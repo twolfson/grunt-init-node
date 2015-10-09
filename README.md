@@ -10,6 +10,8 @@ This is a personal fork from https://github.com/gruntjs/grunt-init-node. Highlig
 - Include gratipay badge
 - Removed Travis CI badge for now (will prob come back when I decide to start using Travis religiously)
 - Added [UNLICENSE][unlicense-site] to available licenses (default)
+- Added SPDX license handling
+- Added `foundry` release integration (`git` + `npm`)
 
 [unlicense-site]: http://unlicense.org/
 [grunt-init]: http://gruntjs.com/project-scaffolding
