@@ -128,6 +128,9 @@ exports.template = function (grunt, init, done) {
       // Set up dependencies
       pkg.dependencies = {};
       pkg.devDependencies = {
+        foundry: '~4.0.3',
+        'foundry-release-git': '~2.0.2',
+        'foundry-release-npm': '~2.0.2',
         jscs: '~1.7.3',
         jshint: '~2.5.10',
         mocha: '~1.11.0',
@@ -142,6 +145,14 @@ exports.template = function (grunt, init, done) {
       if (props.private) {
         pkg.private = true;
       }
+
+      // Define foundry release configuration
+      pkg.foundry = {
+        releaseCommands: [
+          'foundry-release-git',
+          'foundry-release-npm'
+        ]
+      };
 
       // Return the package
       return pkg;
