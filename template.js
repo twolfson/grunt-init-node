@@ -113,6 +113,8 @@ exports.template = function (grunt, init, done) {
       // If there was UNLICENSE, add it as a license
       if (props.unlicense) {
         pkg.license = 'Unlicense';
+      } else {
+        pkg.license = props.license;
       }
 
       // Define scripts
