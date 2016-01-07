@@ -28,6 +28,6 @@ Support this project and [others by twolfson][gratipay] via [gratipay][].
 [gratipay]: https://www.gratipay.com/twolfson/
 
 ## License
-Copyright (c) 2015 Todd Wolfson
+Copyright (c) 2016 Todd Wolfson
 
 Licensed under the MIT license.
