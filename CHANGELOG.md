@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.14.0 - Added "sudo: false" to `.travis.yml`
+
 1.13.1 - Fixed broken test assertion
 
 1.13.0 - Moved from PNG to SVG for images
