@@ -1,4 +1,4 @@
-# {%= name %} [![Build status](https://travis-ci.org/{%= travis_username %}/{%= name %}.png?branch=master)](https://travis-ci.org/{%= travis_username %}/{%= name %})
+# {%= name %} [![Build status](https://travis-ci.org/{%= travis_username %}/{%= name %}.svg?branch=master)](https://travis-ci.org/{%= travis_username %}/{%= name %})
 
 {%= description %}
 
@@ -24,7 +24,7 @@ Support this project and [others by {%= gratipay_username %}][gratipay] via [gra
 
 [![Support via Gratipay][gratipay-badge]][gratipay]
 
-[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
 [gratipay]: https://www.gratipay.com/{%= gratipay_username %}/
 {% } %}{% if (unlicense) { %}
 ## Unlicense

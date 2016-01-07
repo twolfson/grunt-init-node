@@ -1,4 +1,4 @@
-# test-mit [![Build status](https://travis-ci.org/twolfson/test-mit.png?branch=master)](https://travis-ci.org/twolfson/test-mit)
+# test-mit [![Build status](https://travis-ci.org/twolfson/test-mit.svg?branch=master)](https://travis-ci.org/twolfson/test-mit)
 
 MIT test project
 
@@ -24,7 +24,7 @@ Support this project and [others by twolfson][gratipay] via [gratipay][].
 
 [![Support via Gratipay][gratipay-badge]][gratipay]
 
-[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
+[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
 [gratipay]: https://www.gratipay.com/twolfson/
 
 ## License
