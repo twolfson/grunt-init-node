@@ -54,7 +54,6 @@ exports.template = function (grunt, init, done) {
     init.prompt('author_email'),
     init.prompt('author_url'),
     init.prompt('travis_username'),
-    init.prompt('gratipay_username'),
     init.prompt('node_version', '>= 0.10.0'),
     init.prompt('main'),
     {
