@@ -50,7 +50,7 @@ exports.template = function (grunt, init, done) {
     init.prompt('author_url'),
     init.prompt('travis_username'),
     {
-      name: 'include_support_me',
+      name: 'include_donations',
       message: 'Should we include a donations section?',
       'default': 'Y/n',
       sanitize: function (value, data, done) {
