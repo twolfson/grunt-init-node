@@ -36,11 +36,6 @@ exports.template = function (grunt, init, done) {
     message: 'Travis CI username (adds Travis CI badge)'
   };
 
-  init.prompts.gratipay_username = {
-    name: 'gratipay_username',
-    message: 'Gratipay username (adds Gratipay badge)'
-  };
-
   init.process({type: 'node'}, [
     // Prompt for these values.
     init.prompt('name'),
@@ -54,6 +49,20 @@ exports.template = function (grunt, init, done) {
     init.prompt('author_email'),
     init.prompt('author_url'),
     init.prompt('travis_username'),
+    {
+      name: 'include_support_me',
+      message: 'Should we include a donations section?',
+      'default': 'Y/n',
+      sanitize: function (value, data, done) {
+        // If the value is the default, swap it with `Y`
+        if (value === 'Y/n') {
+          value = 'Y';
+        }
+
+        // Check the values ('Y'.toLowerCase() === 'y')
+        done(null, value.toLowerCase() === 'n');
+      }
+    },
     init.prompt('node_version', '>= 0.10.0'),
     init.prompt('main'),
     {
