@@ -18,15 +18,16 @@ _(Coming soon)_
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint via `npm run lint` and test via `npm test`.
-{% if (gratipay_username) { %}
+
 ## Donating
-Support this project and [others by {%= gratipay_username %}][gratipay] via [gratipay][].
+Support this project and [others by twolfson][twolfson-projects] via [donations][twolfson-support-me].
 
-[![Support via Gratipay][gratipay-badge]][gratipay]
+<http://twolfson.com/support-me>
 
-[gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.svg
-[gratipay]: https://www.gratipay.com/{%= gratipay_username %}/
-{% } %}{% if (unlicense) { %}
+[twolfson-projects]: http://twolfson.com/projects
+[twolfson-support-me]: http://twolfson.com/support-me
+
+{% if (unlicense) { %}
 ## Unlicense
 As of {%= grunt.template.today('mmm dd yyyy') %}, {%= author_name %} has released this repository and its contents to the public domain.
 
