@@ -60,7 +60,7 @@ exports.template = function (grunt, init, done) {
         }
 
         // Check the values ('Y'.toLowerCase() === 'y')
-        done(null, value.toLowerCase() === 'n');
+        done(null, value.toLowerCase() !== 'n');
       }
     },
     init.prompt('node_version', '>= 0.10.0'),
