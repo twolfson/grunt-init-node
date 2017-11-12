@@ -63,7 +63,7 @@ exports.template = function (grunt, init, done) {
         done(null, value.toLowerCase() !== 'n');
       }
     },
-    init.prompt('node_version', '>= 0.10.0'),
+    init.prompt('node_version', '>= 4.0.0'),
     init.prompt('main'),
     {
       name: 'keywords',

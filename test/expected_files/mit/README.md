@@ -28,6 +28,6 @@ Support this project and [others by twolfson][twolfson-projects] via [donations]
 [twolfson-support-me]: http://twolfson.com/support-me
 
 ## License
-Copyright (c) 2016 Todd Wolfson
+Copyright (c) 2017 Todd Wolfson
 
 Licensed under the MIT license.
