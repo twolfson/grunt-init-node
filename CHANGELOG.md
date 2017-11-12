@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.16.0 - Moved from `twolfson-style` to ESLint
+
 1.15.0 - Updated donating section and supported Node.js versions
 
 1.14.0 - Added "sudo: false" to `.travis.yml`
