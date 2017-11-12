@@ -127,22 +127,20 @@ exports.template = function (grunt, init, done) {
 
       // Define scripts
       pkg.scripts = {
-        precheck: 'twolfson-style precheck lib/ test/',
-        lint: 'twolfson-style lint lib/ test/',
-        pretest: 'twolfson-style install',
+        precheck: 'eslint lib/ test/',
+        lint: 'eslint lib/ test/ --max-warnings 0',
         test: 'npm run precheck && mocha --reporter dot && npm run lint'
       };
 
       // Set up dependencies
       pkg.dependencies = {};
       pkg.devDependencies = {
+        eslint: '~4.11.0',
+        'eslint-config-twolfson': '~1.0.0',
         foundry: '~4.3.2',
         'foundry-release-git': '~2.0.2',
         'foundry-release-npm': '~2.0.2',
-        jscs: '~3.0.7',
-        jshint: '~2.9.4',
-        mocha: '~3.1.2',
-        'twolfson-style': '~1.6.1'
+        mocha: '~3.1.2'
       };
 
       // Reposition keywords
