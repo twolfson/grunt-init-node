@@ -11,28 +11,26 @@
     "url": "https://github.com/twolfson/grunt-init-node/issues"
   },
   "scripts": {
-    "precheck": "twolfson-style precheck *.js test/",
-    "lint": "twolfson-style lint *.js test/",
-    "pretest": "twolfson-style install",
+    "precheck": "eslint *.js test/",
+    "lint": "eslint *.js test/ --max-warnings 0",
     "test": "npm run precheck && mocha --reporter dot && npm run lint"
   },
   "dependencies": {
     "underscore.string": "~2.4.0"
   },
   "devDependencies": {
+    "eslint": "~4.11.0",
+    "eslint-config-twolfson": "~1.0.0",
     "findit": "~1.1.0",
     "foundry": "~4.3.2",
     "foundry-release-git": "~2.0.2",
     "foundry-release-npm": "~2.0.2",
     "grunt": "~0.4.5",
     "grunt-init": "~0.2.1",
-    "jscs": "~3.0.7",
-    "jshint": "~2.9.4",
     "mkdirp": "~0.3.5",
     "mocha": "~3.1.2",
     "rimraf": "~2.2.2",
-    "suppose": "~0.2.0",
-    "twolfson-style": "~1.6.1"
+    "suppose": "~0.2.0"
   },
   "keywords": [],
   "private": true,
