@@ -12,6 +12,11 @@ matrix:
 before_install:
   - curl --location http://rawgit.com/twolfson/fix-travis-ci/master/lib/install.sh | bash -s
 
+install:
+  - npm install -g grunt-cli
+  - npm install
+  - ./symlink.sh
+
 notifications:
   email:
     recipients:
