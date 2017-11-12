@@ -52,7 +52,7 @@ exports.template = function (grunt, init, done) {
     {
       name: 'include_donations',
       message: 'Should we include a donations section?',
-      'default': 'Y/n',
+      default: 'Y/n',
       sanitize: function (value, data, done) {
         // If the value is the default, swap it with `Y`
         if (value === 'Y/n') {
@@ -72,7 +72,7 @@ exports.template = function (grunt, init, done) {
     {
       name: 'private',
       message: 'Should this project be private?',
-      'default': 'y/N',
+      default: 'y/N',
       sanitize: function (value, data, done) {
         // If the value is the default, swap it with `N`
         if (value === 'y/N') {
@@ -84,6 +84,11 @@ exports.template = function (grunt, init, done) {
       }
     }
   ], function (err, props) {
+    // If there was an error, callback with it
+    if (err) {
+      return done(err);
+    }
+
     // Redefine safe name to our standards
     // https://github.com/gruntjs/grunt-init/blob/0327945c4f48cb8b320ebc051b7cb7852debfb3d/tasks/init.js#L99-L106
     props.js_safe_name = _s.camelize(props.js_safe_name);

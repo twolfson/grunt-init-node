@@ -50,6 +50,7 @@ describe('An UNLICENSE init', function () {
   it('actual directory matches expected directory', function (done) {
     // Walk the actual directory
     var finder = findit(this.actualDir);
+    // eslint-disable-next-line spaced-comment
     finder.on('file', function (filepath/*, stats*/) {
       // Load in the files
       var actualFile = fs.readFileSync(filepath, 'utf8');
@@ -71,6 +72,7 @@ describe('An UNLICENSE init', function () {
 
   it('expected directory does not have more files than actual directory', function (done) {
     var finder = findit(this.expectedDir);
+    // eslint-disable-next-line spaced-comment
     finder.on('file', function (filepath/*, stats*/) {
       // Get the stats of the actual file (error will throw if non-existant)
       var actualFilepath = filepath.replace('/expected_files/', '/actual_files/');
@@ -176,6 +178,7 @@ describe('An MIT init', function () {
   it('actual directory matches expected directory', function (done) {
     // Walk the actual directory
     var finder = findit(this.actualDir);
+    // eslint-disable-next-line spaced-comment
     finder.on('file', function (filepath/*, stats*/) {
       // Load in the files
       var actualFile = fs.readFileSync(filepath, 'utf8');
@@ -197,6 +200,7 @@ describe('An MIT init', function () {
 
   it('expected directory does not have more files than actual directory', function (done) {
     var finder = findit(this.expectedDir);
+    // eslint-disable-next-line spaced-comment
     finder.on('file', function (filepath/*, stats*/) {
       // Get the stats of the actual file (error will throw if non-existant)
       var actualFilepath = filepath.replace('/expected_files/', '/actual_files/');
