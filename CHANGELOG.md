@@ -1,4 +1,6 @@
 # grunt-init-node changelog
+1.16.2 - Corrected Gratipay to donations section in README
+
 1.16.1 - Added back Travis CI setup
 
 1.16.0 - Moved from `twolfson-style` to ESLint
